@@ -8,7 +8,7 @@ export interface TokenData {
     priceChange24h: number;
     priceChange1h: number;
     timestamp: number;
-    source: string[]; // ['dexscreener', 'jupiter'] to track provenance
+    source: string[];
     marketCap: number;
 }
 
