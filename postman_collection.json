@@ -1,0 +1,85 @@
+{
+    "info": {
+        "_postman_id": "aa123456-7890-1234-5678-90abcdef1234",
+        "name": "Meme Aggregator",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Get Tokens (Default)",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:3000/api/tokens",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "api",
+                        "tokens"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Get Tokens (Sorted by Volume)",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:3000/api/tokens?sort=volume",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "api",
+                        "tokens"
+                    ],
+                    "query": [
+                        {
+                            "key": "sort",
+                            "value": "volume"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Get Tokens (Pagination)",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:3000/api/tokens?limit=5&cursor=5",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "api",
+                        "tokens"
+                    ],
+                    "query": [
+                        {
+                            "key": "limit",
+                            "value": "5"
+                        },
+                        {
+                            "key": "cursor",
+                            "value": "5"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+}
