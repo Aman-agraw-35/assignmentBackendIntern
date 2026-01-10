@@ -23,7 +23,7 @@ class CacheService {
         await this.redis.set(key, JSON.stringify(value), 'EX', ttl);
     }
 
-    // Helper for "get or fetch" pattern
+
     async getOrFetch<T>(key: string, fetcher: () => Promise<T>, ttl = config.cacheTtl): Promise<T> {
         const cached = await this.get<T>(key);
         if (cached) return cached;
