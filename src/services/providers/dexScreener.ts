@@ -14,7 +14,7 @@ export class DexScreenerProvider implements DexSource {
             if (!data.pairs) return [];
 
             return data.pairs.map((pair: any) => ({
-                address: pair.baseToken.address, // prioritizing base token
+                address: pair.baseToken.address,
                 name: pair.baseToken.name,
                 symbol: pair.baseToken.symbol,
                 priceUsd: parseFloat(pair.priceUsd) || 0,
@@ -22,7 +22,7 @@ export class DexScreenerProvider implements DexSource {
                 volume24h: pair.volume?.h24 || 0,
                 priceChange24h: pair.priceChange?.h24 || 0,
                 priceChange1h: pair.priceChange?.h1 || 0,
-                marketCap: pair.fdv || 0, // approximation
+                marketCap: pair.fdv || 0,
                 timestamp: Date.now(),
                 source: ['dexscreener']
             }));
