@@ -21,7 +21,6 @@ const createClient = (baseUrl: string): AxiosInstance => {
             }
 
             config.retryAttempt += 1;
-            // Exponential backoff: 200ms, 400ms, 800ms...
             const delay = Math.pow(2, config.retryAttempt) * 100;
 
             await new Promise((resolve) => setTimeout(resolve, delay));
