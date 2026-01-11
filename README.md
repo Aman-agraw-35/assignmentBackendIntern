@@ -4,7 +4,7 @@ A backend service that aggregates real-time meme coin data from DexScreener and 
 
 ## Live Link
 
-[Link to the API](https://assignmentbackendintern.onrender.com)
+[Link to the API](https://assignmentbackendintern.onrender.com/health)
 
 ## Architecture Highlights
 
@@ -69,4 +69,5 @@ src/
 ## Deployment
 
 Deployable to any Node.js environment (Render, Railway, Heroku). Ensure `REDIS_URL` is set.
+
 
